@@ -12,6 +12,12 @@ const TaskInput = (props) => {
 
   const formSubmitHandler = (event) => {
     event.preventDefault();
+
+    //** проверка инпута формы на данные */
+
+    if (inputText.trim().length === 0) {
+      return;
+    }
     props.onAddTask(inputText);
   };
 
